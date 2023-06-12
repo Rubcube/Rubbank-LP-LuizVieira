@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import styled, {createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -17,13 +17,11 @@ const GlobalStyle = createGlobalStyle`
       @media screen and (max-width: 1300px){
         font-size: 12px;
       }
-
+      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body{
-      width: 100vw;
-      height: 100vh;
-      
       background: linear-gradient(112.9deg, #2D377F 0%, #6B7AE5 100%);
       @media screen and (max-width: 700px){
         background-color: linear-gradient(112.9deg, #2D377F 0%, #6B7AE5 100%) ;
@@ -36,7 +34,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyle/>
+    <GlobalStyle />
     <App />
   </React.StrictMode>
 );

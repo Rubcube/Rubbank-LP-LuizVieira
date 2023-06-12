@@ -37,26 +37,33 @@ export const Mockup = styled.div`
 `;
 
 export const Content = styled.section`
-    position: absolute;
-    top: 16vh;
-    height: calc(84vh);
+    position: relative;
+    min-height: 88vh;
     padding-left: 4em;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 7vh;
+    max-width: 50vw;
+    
+    @media screen and (max-width: 1024px){
+        max-width: 80vw;
+    }
 
     @media screen and (max-width: 819px){
-        top: 0;
         padding: 17px;
         align-items: center;
         margin-top: 9em;
         gap: 7vh;
+        max-width: 100vw;
+        margin-top: 3vh;
     }
 
     @media screen and (max-width: 465px){
-        margin-top: 13vh;
+        margin-top: 0em;
         justify-content: start;
         gap: 3vh;
+        
     }
 `;
 
@@ -64,7 +71,6 @@ export const Title = styled.h1`
     font-size: 4em;
     font-weight: 400;
     color: #FFFFFF;
-    max-width: 45rem;
 
     span{
         font-weight: 700;
@@ -82,7 +88,6 @@ export const Subtitle = styled.h2`
     font-size: 2.6em;
     font-weight: 400;
     color: #FFFFFF;
-    max-width: 45rem;
 
     span{
         font-weight: 700;
@@ -94,29 +99,7 @@ export const Subtitle = styled.h2`
         order: 1;
         text-align: center;
         font-size: 2.5vh;
-        
-    }
-`;
-
-export const CallToAction = styled.div`
-    max-width: 45rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-self: flex-end;
-    align-items: center;
-    gap: 2em;
-
-    img{
-        width: 16.67em;
-        height: 11em;
-        @media screen and (max-width: 700px){
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 465px){
-        max-width: 80vw;
+        margin-bottom: 2em;
     }
 `;
 
@@ -124,9 +107,10 @@ export const BtnDownload = styled.div`
     border: 2px dashed #B1C65C;
     padding: 1.75vh;
     display: flex;
+    align-self: center;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
     h1{
         background-color: #B1C65C;
         color: #2D3024;
@@ -139,7 +123,6 @@ export const BtnDownload = styled.div`
 
 
     @media screen and (max-width: 465px){
-        border: none;
         h1{
             font-size: 1.5em;
             font-weight: bolder;
@@ -152,12 +135,15 @@ export const BtnDownload = styled.div`
 export const Tag = styled.div`
     display: flex;
     flex-direction: row;
+    align-self: center;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 41.67rem;
-    margin-top: -4vh;
+    margin-top: -5vh;
     h2{
+        font-size: 1.9em;
+        font-weight: 400;
         color: #FFFFFF;
     }
 
